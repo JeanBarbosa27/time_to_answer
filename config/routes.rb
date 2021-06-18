@@ -1,18 +1,25 @@
 
 Rails.application.routes.draw do
+  # Home
+  root to: 'site/welcome#index'
+
+  # Devise routes
+  devise_for :admins
+  devise_for :users
+
+  # Namespaced routes
   namespace :site do
     get 'welcome/index'
   end
-  namespace :profiles_backoffice do
-    get 'welcome/index'
-  end
+
   namespace :admins_backoffice do
     get 'welcome/index'
   end
-  devise_for :profiles
-  devise_for :admins
-  get 'welcome/index'
 
-  root to: 'site/welcome#index'
+  namespace :users_backoffice do
+    get 'welcome/index'
+  end
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
