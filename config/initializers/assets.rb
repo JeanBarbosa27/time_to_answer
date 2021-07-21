@@ -15,10 +15,9 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # CSS Precompiling
 Rails.application.config.assets.precompile += %w[
   admins_backoffice.scss
-  admins_backoffice/vendors.css
 ]
 
 # JS Precompiling
 Rails.application.config.assets.precompile += %w[
-  admins_backoffice/vendors.js
+  admins_backoffice.js
 ]
