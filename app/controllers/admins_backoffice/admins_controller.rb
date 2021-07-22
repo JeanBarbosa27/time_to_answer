@@ -8,6 +8,20 @@ module AdminsBackoffice
       @admins = Admin.all
     end
 
+    def new
+      @admin = Admin.new
+    end
+
+    def create
+      @admin = Admin.new(admin_params)
+
+      if @admin.save
+        redirect_to admins_backoffice_admins_url, notice: I18n.t('messages.sucess.update.admin')
+      else
+        render :edit
+      end
+    end
+
     def edit; end
 
     def update

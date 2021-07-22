@@ -4,6 +4,8 @@ en:
   messages:
     success:
       update:
+        admin: 'Admin user successfully created!'
+      update:
         admin: 'Admin user successfully updated!'
   panels:
     administrative_backoffice:
@@ -12,6 +14,7 @@ en:
   roles:
     managers: 'Managers'
   texts:
+    adding: 'Adding'
     editing: 'Editing'
   verbs:
     action: 'Action'
