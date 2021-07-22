@@ -1,0 +1,20 @@
+pt-BR:
+  actions:
+    save: 'Salvar'
+  links:
+    back: 'Voltar'
+  messages:
+    success:
+      update:
+        admin: 'Usuário administrador atualizado com sucesso!'
+  panels:
+    administrative_backoffice:
+      title: 'Backoffice Administrativo'
+      subtitle: 'Este é o quadro de administradores, onde você pode administrar a lista de usuários administradores!'
+  roles:
+    managers: 'Administradores'
+  texts:
+    editing: 'Editando'
+  verbs:
+    action: 'Ação'
+    actions: 'Ações'

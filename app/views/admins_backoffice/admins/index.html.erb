@@ -1,7 +1,7 @@
-<h2>Managers</h2>
-<p>This is the managers board, where you can manage the managers list!</p>
+<h2><%= t 'roles.managers' %></h2>
+<p><%= t 'panels.administrative_backoffice.subtitle' %></p>
 <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
-  <% items = ['#', 'Email', 'Actions'] %>
+  <% items = ['#', Admin.human_attribute_name('email'), I18n.t('verbs.actions')] %>
 
   <thead>
     <tr role="row">
@@ -24,13 +24,13 @@
   <tbody>
     <% @admins.each do |admin| %>
       <tr class="<%= cycle('odd', 'even') %>">
-        <td class="sorting_1"><%= admin.id %></td>
+        <td class="sorting_1 d-flex justify-content-center"><%= admin.id %></td>
         <td><%= admin.email %></td>
         <td class="w-100 d-flex justify-content-center">
           <%= link_to edit_admins_backoffice_admin_path(admin), class: 'btn btn-success btn-circle btn-sm' do %>
             <i class="fas fa-edit"></i>
           <% end %>
-          <a href="#" class="btn btn-danger btn-circle btn-sm">
+          <a href="#" class="btn btn-danger btn-circle btn-sm ml-2">
             <i class="fas fa-trash"></i>
           </a>
         </td>
