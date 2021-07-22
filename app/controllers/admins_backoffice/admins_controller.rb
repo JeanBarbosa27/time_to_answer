@@ -13,6 +13,10 @@ module AdminsBackoffice
     def update
       @admin = Admin.find(params[:id])
 
+      if params[:admin][:password].blank? && params[:admin][:password_confirmation].blank?
+        params[:admin].extract!(:password, :password_confirmation)
+      end
+
       if @admin.update(admin_params)
         redirect_to admins_backoffice_admins_url, notice: I18n.t('messages.sucess.update.admin')
       else
