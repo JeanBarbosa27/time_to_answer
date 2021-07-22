@@ -1,2 +1,40 @@
 <h2>Managers</h2>
 <p>This is the managers board, where you can manage the managers list!</p>
+<table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+  <% items = ['#', 'Email', 'Actions'] %>
+
+  <thead>
+    <tr role="row">
+    <% items.each do |item| %>
+      <th class="sorting sorting_asc text-center" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending"
+          aria-label="Name: activate to sort column descending"
+      >
+        <%= item %>
+      </th>
+    <% end %>
+    </tr>
+  </thead>
+  <tfoot>
+    <tr>
+    <% items.each do |item| %>
+      <th class="text-center" rowspan="1" colspan="1"><%= item %></th>
+    <% end %>
+    </tr>
+  </tfoot>
+  <tbody>
+    <% @admins.each do |admin| %>
+      <tr class="<%= cycle('odd', 'even') %>">
+        <td class="sorting_1"><%= admin.id %></td>
+        <td><%= admin.email %></td>
+        <td class="w-100 d-flex justify-content-center">
+          <a href="#" class="btn btn-success btn-circle btn-sm">
+            <i class="fas fa-edit"></i>
+          </a>
+          <a href="#" class="btn btn-danger btn-circle btn-sm">
+            <i class="fas fa-trash"></i>
+          </a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
