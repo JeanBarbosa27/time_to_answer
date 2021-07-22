@@ -47,18 +47,18 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-          <a class="nav-link" href="index.html">
+          <%= link_to admins_backoffice_welcome_index_path, class:"nav-link" do %>
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
-          </a>
+          <% end %>
         </li>
 
         <!-- Nav Item - Managers -->
         <li class="nav-item">
-          <a class="nav-link" href="index.html">
+          <%= link_to admins_backoffice_admins_index_path, class:"nav-link" do %>
             <i class="fas fa-fw fa-users"></i>
             <span>Managers</span>
-          </a>
+          <% end %>
         </li>
 
         <!-- Divider -->
@@ -84,19 +84,6 @@
             <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
               <i class="fa fa-bars"></i>
             </button>
-
-            <!-- Topbar Search -->
-            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-              <div class="input-group">
-                <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                  aria-label="Search" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-primary" type="button">
-                    <i class="fas fa-search fa-sm"></i>
-                  </button>
-                </div>
-              </div>
-            </form>
 
             <!-- Topbar Navbar -->
             <ul class="navbar-nav ml-auto">
@@ -125,7 +112,7 @@
           <div class="container-fluid">
 
             <!-- Page Heading -->
-            <h1 class="h3 mb-4 text-gray-800">LAYOUTS ADMINS BACKOFFICE</h1>
+            <h1 class="h3 mb-4 text-gray-800">Administrative Backoffice</h1>
             <%= yield %>
 
           </div>
@@ -138,7 +125,7 @@
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright &copy; Your Website 2020</span>
+              <span>Copyright &copy; Time To Answer <%= DateTime.now.year %></span>
             </div>
           </div>
         </footer>

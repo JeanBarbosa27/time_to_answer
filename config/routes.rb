@@ -1,5 +1,8 @@
 
 Rails.application.routes.draw do
+  namespace :admins_backoffice do
+    get 'admins/index'
+  end
   # Home
   root to: 'site/welcome#index'
 
