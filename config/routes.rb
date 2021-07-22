@@ -1,8 +1,5 @@
 
 Rails.application.routes.draw do
-  namespace :admins_backoffice do
-    get 'admins/index'
-  end
   # Home
   root to: 'site/welcome#index'
 
@@ -17,6 +14,7 @@ Rails.application.routes.draw do
 
   namespace :admins_backoffice do
     get 'welcome/index'
+    resources :admins, only: %i[index]
   end
 
   namespace :users_backoffice do
