@@ -1,22 +1,16 @@
 module AdminsBackoffice
   class AdminsController < AdminsBackofficeController
+    before_action :set_admin, only: %i[edit update]
+    before_action :extract_passwords, only: %i[update]
     before_action :admin_params, only: %i[update]
 
     def index
       @admins = Admin.all
     end
 
-    def edit
-      @admin = Admin.find(params[:id])
-    end
+    def edit; end
 
     def update
-      @admin = Admin.find(params[:id])
-
-      if params[:admin][:password].blank? && params[:admin][:password_confirmation].blank?
-        params[:admin].extract!(:password, :password_confirmation)
-      end
-
       if @admin.update(admin_params)
         redirect_to admins_backoffice_admins_url, notice: I18n.t('messages.sucess.update.admin')
       else
@@ -25,6 +19,18 @@ module AdminsBackoffice
     end
 
     private
+
+    def set_admin
+      @admin = Admin.find(params[:id])
+    end
+
+    def extract_passwords
+      params[:admin].extract!(:password, :password_confirmation) if empty_passwords?
+    end
+
+    def empty_passwords?
+      params[:admin][:password].blank? && params[:admin][:password_confirmation].blank?
+    end
 
     def admin_params
       params.require(:admin).permit(
