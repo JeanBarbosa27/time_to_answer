@@ -11,9 +11,9 @@ module AdminsBackoffice
     end
 
     def update
-      admin = Admin.find(params[:id])
+      @admin = Admin.find(params[:id])
 
-      if admin.update(admin_params)
+      if @admin.update(admin_params)
         redirect_to admins_backoffice_admins_url, notice: I18n.t('messages.sucess.update.admin')
       else
         render :edit
