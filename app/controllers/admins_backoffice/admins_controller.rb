@@ -16,7 +16,7 @@ module AdminsBackoffice
       @admin = Admin.new(admin_params)
 
       if @admin.save
-        redirect_to admins_backoffice_admins_url, notice: I18n.t('messages.sucess.update.admin')
+        redirect_to admins_backoffice_admins_url, notice: I18n.t('messages.success.create.admin')
       else
         render :edit
       end
@@ -26,7 +26,7 @@ module AdminsBackoffice
 
     def update
       if @admin.update(admin_params)
-        redirect_to admins_backoffice_admins_url, notice: I18n.t('messages.sucess.update.admin')
+        redirect_to admins_backoffice_admins_url, notice: I18n.t('messages.success.update.admin')
       else
         render :edit
       end
