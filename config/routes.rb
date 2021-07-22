@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   namespace :admins_backoffice do
     get 'welcome/index'
-    resources :admins, except: %i[destroy]
+    resources :admins
   end
 
   namespace :users_backoffice do

@@ -5,10 +5,9 @@ pt-BR:
     back: 'Voltar'
   messages:
     success:
-      create:
-        admin: 'Usuário administrador cadastrado com sucesso!'
-      update:
-        admin: 'Usuário administrador atualizado com sucesso!'
+      create: 'cadastrado com sucesso!'
+      delete: 'removido com sucesso!'
+      update: 'atualizado com sucesso!'
   panels:
     administrative_backoffice:
       title: 'Backoffice Administrativo'
@@ -18,6 +17,8 @@ pt-BR:
   texts:
     adding: 'Adicionando'
     editing: 'Editando'
+    confirmations:
+      delete: 'Você tem certeza que deseja deletar?'
   verbs:
     action: 'Ação'
     actions: 'Ações'

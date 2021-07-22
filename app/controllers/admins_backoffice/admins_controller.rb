@@ -1,6 +1,6 @@
 module AdminsBackoffice
   class AdminsController < AdminsBackofficeController
-    before_action :set_admin, only: %i[edit update]
+    before_action :set_admin, only: %i[edit update destroy]
     before_action :extract_passwords, only: %i[update]
     before_action :admin_params, only: %i[update]
 
@@ -16,7 +16,7 @@ module AdminsBackoffice
       @admin = Admin.new(admin_params)
 
       if @admin.save
-        redirect_to admins_backoffice_admins_url, notice: I18n.t('messages.success.create.admin')
+        redirect_to admins_backoffice_admins_url, notice: "#{@admin.email} #{I18n.t('messages.success.create')}"
       else
         render :edit
       end
@@ -26,9 +26,17 @@ module AdminsBackoffice
 
     def update
       if @admin.update(admin_params)
-        redirect_to admins_backoffice_admins_url, notice: I18n.t('messages.success.update.admin')
+        redirect_to admins_backoffice_admins_url, notice: "#{@admin.email} #{I18n.t('messages.success.update')}"
       else
         render :edit
+      end
+    end
+
+    def destroy
+      if @admin.destroy
+        redirect_to admins_backoffice_admins_url, notice: "#{@admin.email} #{I18n.t('messages.success.delete')}"
+      else
+        render :index
       end
     end
 

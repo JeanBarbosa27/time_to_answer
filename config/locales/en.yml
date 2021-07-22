@@ -3,10 +3,9 @@ en:
     save: 'Save'
   messages:
     success:
-      update:
-        admin: 'Admin user successfully created!'
-      update:
-        admin: 'Admin user successfully updated!'
+      create: 'successfully created!'
+      delete: 'successfully removed!'
+      update: 'successfully updated!'
   panels:
     administrative_backoffice:
       title: 'Administrative Backoffice'
@@ -16,6 +15,8 @@ en:
   texts:
     adding: 'Adding'
     editing: 'Editing'
+    confirmations:
+      delete: 'Are you sure to delete this?'
   verbs:
     action: 'Action'
     actions: 'Actions'
