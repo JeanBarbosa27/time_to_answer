@@ -36,9 +36,9 @@
     </tr>
   </tfoot>
   <tbody>
-    <% @admins.each do |admin| %>
+    <% @admins.each_with_index do |admin, index| %>
       <tr class="<%= cycle('odd', 'even') %>">
-        <td class="sorting_1 d-flex justify-content-center"><%= admin.id %></td>
+        <td class="sorting_1 d-flex justify-content-center"><%= index + 1 %></td>
         <td><%= admin.email %></td>
         <td class="w-100 d-flex justify-content-center">
           <%= link_to edit_admins_backoffice_admin_path(admin), class: 'btn btn-primary btn-circle btn-sm' do %>
@@ -53,3 +53,6 @@
     <% end %>
   </tbody>
 </table>
+<div class="d-flex justify-content-center mt-3">
+  <%= paginate @admins %>
+</div>
