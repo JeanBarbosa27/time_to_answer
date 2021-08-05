@@ -3,7 +3,7 @@ module AdminsBackoffice
     before_action :set_subject, only: %i[edit update destroy]
 
     def index
-      @subjects = Subject.all.page params[:page]
+      @subjects = Subject.order(:description).page params[:page]
     end
 
     def new

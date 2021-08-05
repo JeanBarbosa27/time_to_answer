@@ -9,7 +9,10 @@ en:
   panels:
     administrative_backoffice:
       title: 'Administrative Backoffice'
-      subtitle: 'This is the managers board, where you can manage the admins users list!'
+      subtitle:
+        dashboard: 'This is the administrative backffice dashboard, where you can set things up.'
+        managers: 'This is the managers board, where you can manage the admins users list.'
+        subjects: 'This is the subjects board, where you can manage the subjects list.'
   roles:
     managers: 'Managers'
   texts:

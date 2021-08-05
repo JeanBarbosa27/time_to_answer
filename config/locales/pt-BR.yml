@@ -11,7 +11,10 @@ pt-BR:
   panels:
     administrative_backoffice:
       title: 'Backoffice Administrativo'
-      subtitle: 'Este é o quadro de administradores, onde você pode administrar a lista de usuários administradores!'
+      subtitle:
+        dashboard: 'Este é o quadro administrativo, onde você pode configurar suas prerências.'
+        managers: 'Este é o quadro de administradores, onde você pode administrar a lista de usuários administradores.'
+        subjects: 'Este é o quadro de assuntos/áreas, onde você pode administrar a lista de assuntos/áreas que serão utilizadas nas questões.'
   roles:
     managers: 'Administradores'
   texts:
