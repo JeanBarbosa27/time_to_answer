@@ -15,15 +15,16 @@
 
     <%= form_with(model: [ :admins_backoffice, @question ], local: true) do |form| %>
       <div class="form-group">
-        <%= form.collection_select  :subject_id, Subject.all, :id, :description, {},
+        <%= form.label :subject_id, @question_subject %>
+        <%= form.collection_select  :subject_id, @subjects, :id, :description, {},
                                     { class: 'form-control',
-                                    placeholder: Question.human_attribute_name('subject') } %>
+                                    placeholder: @question_subject } %>
       </div>
       <div class="form-group">
         <%= form.text_area  :description, 
                             class: 'form-control',
                             autofocus: true,
-                            placeholder: Question.human_attribute_name('description'),
+                            placeholder: @question_description,
                             rows: 5 %>
       </div>
       <%= form.submit t('actions.save'), class: 'btn btn-primary col-sm-12 col-lg-3' %>

@@ -27,7 +27,7 @@ pt-BR:
         subject: 'Assunto/Área'
       subject:
         id: 'Código identificador'
-        desciption: 'Descrição'
+        description: 'Assunto/Área'
       user:
         id: 'Código identificador'
         email: 'E-mail'

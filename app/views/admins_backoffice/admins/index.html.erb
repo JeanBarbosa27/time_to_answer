@@ -1,4 +1,4 @@
-<h2><%= Admin.model_name.human count: @admins %></h2>
+<h2><%= @admin_model_name %></h2>
 <p><%= t 'panels.administrative_backoffice.subtitle.managers' %></p>
 <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
   <thead>
@@ -6,7 +6,7 @@
       <th class="sorting sorting_asc text-center" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending"
           aria-label="Name: activate to sort column descending"
       >
-        <%= Admin.human_attribute_name('email') %>
+        <%= @admin_attribute_email %>
       </th>
       <th class="sorting sorting_asc text-center" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending"
           aria-label="Name: activate to sort column descending"
@@ -20,7 +20,7 @@
   </thead>
   <tfoot>
     <tr>
-      <th class="text-center" rowspan="1" colspan="1"><%= Admin.human_attribute_name('email') %></th>
+      <th class="text-center" rowspan="1" colspan="1"><%= @admin_attribute_email %></th>
       <th class="text-center" rowspan="1" colspan="1">
         <%= t 'verbs.actions' %>
         <%= link_to new_admins_backoffice_admin_path, class: 'btn btn-success btn-circle btn-sm ml-2' do %>

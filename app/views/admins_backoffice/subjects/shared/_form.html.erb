@@ -18,7 +18,7 @@
         <%= form.text_field :description, 
             class: 'form-control',
             autofocus: true,
-            placeholder: Subject.human_attribute_name('description') %>
+            placeholder: @subject_attribute_description %>
       </div>
       <%= form.submit t('actions.save'), class: 'btn btn-primary col-sm-12 col-lg-3' %>
       <%= link_to t('links.back'), 

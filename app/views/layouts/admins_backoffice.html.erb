@@ -61,7 +61,7 @@
             <i  class="fas fa-fw fa-users
                 <%= 'text-light' if active_link?(admins_backoffice_admins_path) %>"
             ></i>
-            <span><%= Admin.model_name.human count: Admin.all %></span>
+            <span><%= @admin_model_name %></span>
           <% end %>
         </li>
 
@@ -71,7 +71,7 @@
             <i  class="fas fa-fw fa-file-alt
                 <%= 'text-light' if active_link?(admins_backoffice_subjects_path) %>"
             ></i>
-            <span><%= Subject.model_name.human count: Subject.all %></span>
+            <span><%= @subject_model_name %></span>
           <% end %>
         </li>
 
@@ -81,7 +81,7 @@
             <i  class="fas fa-fw fa-list-alt
                 <%= 'text-light' if active_link?(admins_backoffice_questions_path) %>"
             ></i>
-            <span><%= Question.model_name.human count: Question.all %></span>
+            <span><%= @question_model_name %></span>
           <% end %>
         </li>
 
