@@ -4,6 +4,9 @@ pt-BR:
       admin:
         one: 'Administrador'
         other: 'Administradores'
+      question:
+        one: 'Pergunta'
+        other: 'Perguntas'
       subject:
         one: 'Assunto/Área'
         other: 'Assuntos/Áreas'
@@ -18,6 +21,10 @@ pt-BR:
         password_confirmation: 'Confirmação de senha'
         created_at: 'Criado em'
         updated_at: 'Atualizado em'
+      question:
+        id: 'Código identificador'
+        description: 'Enunciado'
+        subject: 'Assunto/Área'
       subject:
         id: 'Código identificador'
         desciption: 'Descrição'

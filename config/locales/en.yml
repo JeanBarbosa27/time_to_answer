@@ -11,8 +11,9 @@ en:
       title: 'Administrative Backoffice'
       subtitle:
         dashboard: 'This is the administrative backffice dashboard, where you can set things up.'
+        questions: 'This is questions board, where you can manage questions list which will be used in answers.'
         managers: 'This is the managers board, where you can manage the admins users list.'
-        subjects: 'This is the subjects board, where you can manage the subjects list.'
+        subjects: 'This is the subjects board, where you can manage the subjects list, which will be used in questions.'
   roles:
     managers: 'Managers'
   texts:

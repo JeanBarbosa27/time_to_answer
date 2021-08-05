@@ -14,6 +14,7 @@ pt-BR:
       subtitle:
         dashboard: 'Este é o quadro administrativo, onde você pode configurar suas prerências.'
         managers: 'Este é o quadro de administradores, onde você pode administrar a lista de usuários administradores.'
+        questions: 'Este é o quadro de perguntas, onde você pode administrar a lista de perguntas que serão usadas nas respostas.'
         subjects: 'Este é o quadro de assuntos/áreas, onde você pode administrar a lista de assuntos/áreas que serão utilizadas nas questões.'
   roles:
     managers: 'Administradores'

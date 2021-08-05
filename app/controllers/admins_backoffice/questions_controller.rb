@@ -48,7 +48,7 @@ module AdminsBackoffice
     end
 
     def question_params
-      params.require(:subject).permit(:description)
+      params.require(:question).permit(:description, :subject_id)
     end
   end
 end

@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-lg-8">
+    <h2 class="h4 text-gray-900 mb-4"><%= action_message %></h2>
+
+    <% if @question.errors.any? %>
+      <% @question.errors.full_messages.each do |message| %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <span><%= message %></span>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      <% end %>
+    <% end %>
+
+    <%= form_with(model: [ :admins_backoffice, @question ], local: true) do |form| %>
+      <div class="form-group">
+        <%= form.collection_select  :subject_id, Subject.all, :id, :description, {},
+                                    { class: 'form-control',
+                                    placeholder: Question.human_attribute_name('subject') } %>
+      </div>
+      <div class="form-group">
+        <%= form.text_area  :description, 
+                            class: 'form-control',
+                            autofocus: true,
+                            placeholder: Question.human_attribute_name('description'),
+                            rows: 5 %>
+      </div>
+      <%= form.submit t('actions.save'), class: 'btn btn-primary col-sm-12 col-lg-3' %>
+      <%= link_to t('links.back'), 
+          admins_backoffice_questions_path,
+          class: 'btn btn-secondary col-sm-12 col-lg-3 mt-sm-2 mt-lg-0 ml-lg-2' %>
+      <div class="row">
+        <div class="col-sm-12 col-lg-3">
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
