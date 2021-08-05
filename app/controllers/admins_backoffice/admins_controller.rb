@@ -4,7 +4,7 @@ module AdminsBackoffice
     before_action :extract_passwords, only: %i[update]
 
     def index
-      @admins = Admin.all.page params[:page]
+      @admins = Admin.order(:email).page params[:page]
     end
 
     def new
@@ -15,7 +15,7 @@ module AdminsBackoffice
       @admin = Admin.new(admin_params)
 
       if @admin.save
-        redirect_to admins_backoffice_admins_url, notice: "#{@admin.email} #{I18n.t('messages.success.create')}"
+        redirect_to admins_backoffice_admins_url, notice: I18n.t('messages.success.create', item: @admin.email)
       else
         render :edit
       end
@@ -25,7 +25,7 @@ module AdminsBackoffice
 
     def update
       if @admin.update(admin_params)
-        redirect_to admins_backoffice_admins_url, notice: "#{@admin.email} #{I18n.t('messages.success.update')}"
+        redirect_to admins_backoffice_admins_url, notice: I18n.t('messages.success.update', item: @admin.email)
       else
         render :edit
       end
@@ -33,7 +33,7 @@ module AdminsBackoffice
 
     def destroy
       if @admin.destroy
-        redirect_to admins_backoffice_admins_url, notice: "#{@admin.email} #{I18n.t('messages.success.delete')}"
+        redirect_to admins_backoffice_admins_url, notice: I18n.t('messages.success.delete', item: @admin.email)
       else
         render :index
       end

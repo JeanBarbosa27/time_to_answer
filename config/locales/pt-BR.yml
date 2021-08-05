@@ -1,28 +1,26 @@
 pt-BR:
   actions:
-    save: 'Salvar'
+    save: Salvar
   links:
-    back: 'Voltar'
+    back: Voltar
   messages:
     success:
-      create: 'cadastrado com sucesso!'
-      delete: 'removido com sucesso!'
-      update: 'atualizado com sucesso!'
+      create: '"%{item}" cadastrado com sucesso!'
+      delete: '"%{item}" removido com sucesso!'
+      update: '"%{item}" atualizado com sucesso!'
   panels:
     administrative_backoffice:
-      title: 'Backoffice Administrativo'
+      title: Backoffice Administrativo
       subtitle:
-        dashboard: 'Este é o quadro administrativo, onde você pode configurar suas prerências.'
-        managers: 'Este é o quadro de administradores, onde você pode administrar a lista de usuários administradores.'
-        questions: 'Este é o quadro de perguntas, onde você pode administrar a lista de perguntas que serão usadas nas respostas.'
-        subjects: 'Este é o quadro de assuntos/áreas, onde você pode administrar a lista de assuntos/áreas que serão utilizadas nas questões.'
-  roles:
-    managers: 'Administradores'
+        dashboard: Este é o quadro administrativo, onde você pode configurar suas prerências.
+        managers: Este é o quadro de administradores, onde você pode administrar a lista de usuários administradores.
+        questions: Este é o quadro de perguntas, onde você pode administrar a lista de perguntas que serão usadas nas respostas.
+        subjects: Este é o quadro de assuntos/áreas, onde você pode administrar a lista de assuntos/áreas que serão utilizadas nas questões.
   texts:
-    adding: 'Adicionando'
-    editing: 'Editando'
+    adding: Adicionando
+    editing: Editando
     confirmations:
-      delete: 'Você tem certeza que deseja deletar?'
+      delete: Você tem certeza que deseja deletar "%{item}"
   verbs:
-    action: 'Ação'
-    actions: 'Ações'
+    action: Ação
+    actions: Ações

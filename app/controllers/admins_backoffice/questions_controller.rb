@@ -16,7 +16,7 @@ module AdminsBackoffice
 
       if @question.save
         redirect_to admins_backoffice_questions_url,
-                    notice: "#{@question.description} #{I18n.t('messages.success.create')}"
+                    notice: I18n.t('messages.success.create', item: @question.description)
       else
         render :edit
       end
@@ -27,7 +27,7 @@ module AdminsBackoffice
     def update
       if @question.update(question_params)
         redirect_to admins_backoffice_questions_url,
-                    notice: "#{@question.description} #{I18n.t('messages.success.update')}"
+                    notice: I18n.t('messages.success.update', item: @question.description)
       else
         render :edit
       end
@@ -36,7 +36,7 @@ module AdminsBackoffice
     def destroy
       if @question.destroy
         redirect_to admins_backoffice_questions_url,
-                    notice: "#{@question.description} #{I18n.t('messages.success.delete')}"
+                    notice: I18n.t('messages.success.delete', item: @question.description)
       else
         render :index
       end

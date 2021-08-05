@@ -61,7 +61,7 @@
             <i  class="fas fa-fw fa-users
                 <%= 'text-light' if active_link?(admins_backoffice_admins_path) %>"
             ></i>
-            <span><%= @admin_model_name %></span>
+            <span><%= t 'activerecord.models.admin.other' %></span>
           <% end %>
         </li>
 
@@ -71,7 +71,7 @@
             <i  class="fas fa-fw fa-file-alt
                 <%= 'text-light' if active_link?(admins_backoffice_subjects_path) %>"
             ></i>
-            <span><%= @subject_model_name %></span>
+            <span><%= t 'activerecord.models.subject.other' %></span>
           <% end %>
         </li>
 
@@ -81,7 +81,7 @@
             <i  class="fas fa-fw fa-list-alt
                 <%= 'text-light' if active_link?(admins_backoffice_questions_path) %>"
             ></i>
-            <span><%= @question_model_name %></span>
+            <span><%= t 'activerecord.models.question.other' %></span>
           <% end %>
         </li>
 

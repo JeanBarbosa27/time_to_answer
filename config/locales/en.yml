@@ -3,9 +3,9 @@ en:
     save: 'Save'
   messages:
     success:
-      create: 'successfully created!'
-      delete: 'successfully removed!'
-      update: 'successfully updated!'
+      create: '"%{item}"successfully created!'
+      delete: '"%{item}"successfully removed!'
+      update: '"%{item}"successfully updated!'
   panels:
     administrative_backoffice:
       title: 'Administrative Backoffice'

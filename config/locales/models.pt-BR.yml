@@ -2,36 +2,40 @@ pt-BR:
   activerecord:
     models:
       admin:
-        one: 'Administrador'
-        other: 'Administradores'
+        one: Administrador
+        other: Administradores
       question:
-        one: 'Pergunta'
-        other: 'Perguntas'
+        one: Pergunta
+        other: Perguntas
       subject:
-        one: 'Assunto/Área'
-        other: 'Assuntos/Áreas'
+        one: Assunto/Área
+        other: Assuntos/Áreas
       user:
-        one: 'Usuário'
-        other: 'Usuários'
+        one: Usuário
+        other: Usuários
     attributes:
       admin:
-        id: 'Código identificador'
-        email: 'E-mail'
-        password: 'Senha'
-        password_confirmation: 'Confirmação de senha'
-        created_at: 'Criado em'
-        updated_at: 'Atualizado em'
+        id: Código identificador
+        email: E-mail
+        password: Senha
+        password_confirmation: Confirmação de senha
+        created_at: Criado em
+        updated_at: Atualizado em
       question:
-        id: 'Código identificador'
-        description: 'Enunciado'
-        subject: 'Assunto/Área'
+        id: Código identificador
+        description: Enunciado
+        subject: Assunto/Área
+        created_at: Criado em
+        updated_at: Atualizado em
       subject:
-        id: 'Código identificador'
-        description: 'Assunto/Área'
+        id: Código identificador
+        description: Assunto/Área
+        created_at: Criado em
+        updated_at: Atualizado em
       user:
-        id: 'Código identificador'
-        email: 'E-mail'
-        password: 'Senha'
-        password_confirmation: 'Confirmação de senha'
-        created_at: 'Criado em'
-        updated_at: 'Atualizado em'
+        id: Código identificador
+        email: E-mail
+        password: Senha
+        password_confirmation: Confirmação de senha
+        created_at: Criado em
+        updated_at: Atualizado em
