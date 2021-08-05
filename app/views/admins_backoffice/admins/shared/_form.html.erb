@@ -18,19 +18,19 @@
         <%= form.text_field :email, 
             class: 'form-control',
             autofocus: true,
-            placeholder: @admin_attribute_email %>
+            placeholder: t('activerecord.attributes.admin.email') %>
       </div>
       <div class="form-group row">
         <div class="col-sm-12 col-lg-6 mb-sm-3">
           <%= form.password_field :password, 
               class: 'form-control',
-              placeholder: @admin_attribute_password %>
+              placeholder: t('activerecord.attributes.admin.password') %>
         </div>
 
         <div class="col-sm-12 col-lg-6">
           <%= form.password_field :password_confirmation, 
               class: 'form-control',
-              placeholder: @admin_attribute_password_confirmation %>
+              placeholder: t('activerecord.attributes.admin.password_confirmation') %>
         </div>
       </div>
       <%= form.submit t('actions.save'), class: 'btn btn-primary col-sm-12 col-lg-3' %>

@@ -6,7 +6,7 @@
       <th class="sorting sorting_asc text-center" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending"
           aria-label="Name: activate to sort column descending"
       >
-        <%= @subject_attribute_description %>
+        <%= t 'activerecord.attributes.subject.description' %>
       </th>
       <th class="sorting sorting_asc text-center" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-sort="ascending"
           aria-label="Name: activate to sort column descending"
@@ -20,7 +20,7 @@
   </thead>
   <tfoot>
     <tr>
-      <th class="text-center" rowspan="1" colspan="1"><%= @subject_attribute_description %></th>
+      <th class="text-center" rowspan="1" colspan="1"><%= t 'activerecord.attributes.subject.description' %></th>
       <th class="text-center" rowspan="1" colspan="1">
         <%= t 'verbs.actions' %>
         <%= link_to new_admins_backoffice_subject_path, class: 'btn btn-success btn-circle btn-sm ml-2' do %>
