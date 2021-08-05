@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-lg-8">
-    <h2 class="h4 text-gray-900 mb-4"><%= action_message %></h2>
+    <h2 class="h4 text-gray-900 mb-4"><%= "#{action_message} #{@admin.model_name.human}" %></h2>
 
     <% if @admin.errors.any? %>
       <% @admin.errors.full_messages.each do |message| %>
