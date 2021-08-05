@@ -1,2 +1,1 @@
-module AdminsBackoffice::AdminsHelper
-end
+module AdminsBackoffice::AdminsHelper; end

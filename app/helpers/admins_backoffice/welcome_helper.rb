@@ -1,2 +1,1 @@
-module AdminsBackoffice::WelcomeHelper
-end
+module AdminsBackoffice::WelcomeHelper; end

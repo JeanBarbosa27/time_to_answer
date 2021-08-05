@@ -2,7 +2,6 @@ module AdminsBackoffice
   class AdminsController < AdminsBackofficeController
     before_action :set_admin, only: %i[edit update destroy]
     before_action :extract_passwords, only: %i[update]
-    before_action :admin_params, only: %i[update]
 
     def index
       @admins = Admin.all.page params[:page]

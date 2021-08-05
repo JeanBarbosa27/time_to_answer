@@ -48,7 +48,9 @@
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
           <%= link_to admins_backoffice_welcome_index_path, class:"nav-link" do %>
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i  class="fas fa-fw fa-tachometer-alt
+                <%= 'text-light' if active_link?(admins_backoffice_welcome_index_path) %>"
+            ></i>
             <span>Dashboard</span>
           <% end %>
         </li>
@@ -56,8 +58,20 @@
         <!-- Nav Item - Managers -->
         <li class="nav-item">
           <%= link_to admins_backoffice_admins_path, class:"nav-link" do %>
-            <i class="fas fa-fw fa-users"></i>
-            <span><%= t 'roles.managers' %></span>
+            <i  class="fas fa-fw fa-users
+                <%= 'text-light' if active_link?(admins_backoffice_admins_path) %>"
+            ></i>
+            <span><%= Admin.model_name.human count: Admin.all %></span>
+          <% end %>
+        </li>
+
+        <!-- Nav Item - Subjects -->
+        <li class="nav-item">
+          <%= link_to admins_backoffice_subjects_path, class:"nav-link" do %>
+            <i  class="fas fa-fw fa-file-alt
+                <%= 'text-light' if active_link?(admins_backoffice_subjects_path) %>"
+            ></i>
+            <span><%= Subject.model_name.human count: Subject.all %></span>
           <% end %>
         </li>
 
