@@ -7,12 +7,9 @@
   <% else %>
   <p>Usuário NÃO está logado</p>
 <% end %>
-<p><%= link_to "Users Backoffice", users_backoffice_welcome_index_path %></p>
-
 
 <% if admin_signed_in? %>
   <p>Administrador <%= current_admin.email %> ESTÁ logado</p>
   <% else %>
   <p>Administrador NÃO está logado</p>  
 <% end %>
-<p><%= link_to "Admins Backoffice", admins_backoffice_welcome_index_path %></p>
