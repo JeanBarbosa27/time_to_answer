@@ -20,11 +20,18 @@ pt-BR:
         subjects: Este é o quadro de assuntos/áreas, onde você pode administrar a lista de assuntos/áreas que serão utilizadas nas questões.
   texts:
     adding: Adicionando
+    confirmations:
+      delete: Você tem certeza que deseja deletar "%{item}"
     correct_f: Correta
     correct_m: Correto
     editing: Editando
-    confirmations:
-      delete: Você tem certeza que deseja deletar "%{item}"
+    email_address: Endereço de e-mail
+    minimum_characters: Mínimo de %{minimum} caracteres
+    sign_in: Acessar
+    sign_in_account: Acessar conta
+    sign_up: Cadastrar
+    sign_up_account: Cadastrar conta
+
   verbs:
     action: Ação
     actions: Ações

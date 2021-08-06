@@ -10,7 +10,7 @@
           <div class="col-lg-8 mx-auto">
             <div class="p-5">
               <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Login</h1>
+                <h1 class="h4 text-gray-900 mb-4"><%= t 'texts.sign_in_account' %></h1>
               </div>
               <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'user' }) do |f| %>
                 <div class="form-group">
@@ -31,7 +31,7 @@
                   </div>
                 <% end %>
 
-                <%= f.submit "Login", class: "btn btn-primary btn-user btn-block" %>
+                <%= f.submit t('texts.sign_in'), class: "btn btn-primary btn-user btn-block" %>
               <% end %>
               <hr>
               <div class="text-center">
