@@ -19,15 +19,24 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="<%= root_path %>">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<%= users_backoffice_welcome_index_path %>">Users Backoffice</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<%= users_backoffice_welcome_index_path %>">Admins Backoffice</a>
-          </li>
+          <% if user_signed_in? %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%= current_user.email %>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <%= link_to t('texts.sign_out'), destroy_user_session_path, method: :delete,
+                            class: 'dropdown-item' %>
+              </div>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to t('texts.sign_in_account'), new_user_session_path, class: 'nav-link' %>
+            </li>
+            <li class="nav-item">
+              <%= link_to t('texts.sign_up_account'), new_user_registration_path, class: 'nav-link' %>
+            </li>
+          <% end %>
         </ul>
         <%# form class="form-inline mt-2 mt-md-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">

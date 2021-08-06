@@ -29,6 +29,7 @@ pt-BR:
     minimum_characters: Mínimo de %{minimum} caracteres
     sign_in: Acessar
     sign_in_account: Acessar conta
+    sign_out: Sair
     sign_up: Cadastrar
     sign_up_account: Cadastrar conta
 
