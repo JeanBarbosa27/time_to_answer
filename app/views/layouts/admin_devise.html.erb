@@ -1,16 +1,52 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>TimeToAnswer</title>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Login | Time To Answer</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= stylesheet_link_tag    'admin_devise' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
 
-  <body>
-    <h1>LAYOUTS ADMIN DEVISE</h1>
-    <%= yield %>
-  </body>
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <%= javascript_include_tag 'admin_devise' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%# Notice center %>
+    <% if flash %>
+      <%= javascript_tag do %>
+        <% flash.each do |key, value| %>
+          $.bootstrapGrowl('<%= value %>', {
+            type: 'danger',
+            offset: { from: 'top', amount: 20 },
+            align: 'right',
+            width: 250,
+            delay: 4000,
+            allow_dismiss: true,
+            stackup_spacing: 10
+          });
+        <% end %>
+      <% end %>
+    <% end %>
+
+</body>
+
 </html>
