@@ -4,6 +4,9 @@ pt-BR:
       admin:
         one: Administrador
         other: Administradores
+      answer:
+        one: Resposta
+        other: Responstas
       question:
         one: Pergunta
         other: Perguntas
@@ -21,6 +24,13 @@ pt-BR:
         password_confirmation: Confirmação de senha
         created_at: Criado em
         updated_at: Atualizado em
+      answer:
+        id: Código identificador
+        description: Resposta
+        correct: Correta
+        created_at: Criado em
+        updated_at: Atualizado em
+
       question:
         id: Código identificador
         description: Enunciado

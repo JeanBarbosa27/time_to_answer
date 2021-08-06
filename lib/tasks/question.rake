@@ -4,7 +4,7 @@ namespace :dev do
   desc 'Adds fake questions to use in answers.'
   task add_fake_questions: :environment do
     show_spinner('Creating fake questions...') do
-      answers_attributes = 4.times.map do |time|
+      answers_attributes = rand(2..5).times.map do |time|
         {
           description: Faker::Lorem.sentence,
           correct: time.zero?

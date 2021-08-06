@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # Customizing the application
+gem 'cocoon'
 gem 'devise'
 gem 'faker'
 gem 'kaminari'
