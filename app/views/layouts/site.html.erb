@@ -25,6 +25,7 @@
                 <%= current_user.email %>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <%= link_to 'User Backoffice', users_backoffice_welcome_index_path, class: 'dropdown-item' %>
                 <%= link_to t('texts.sign_out'), destroy_user_session_path, method: :delete,
                             class: 'dropdown-item' %>
               </div>
@@ -35,6 +36,18 @@
             </li>
             <li class="nav-item">
               <%= link_to t('texts.sign_up_account'), new_user_registration_path, class: 'nav-link' %>
+            </li>
+          <% end %>
+          <% if admin_signed_in? %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%= current_admin.email %>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <%= link_to 'Admin Backoffice', admins_backoffice_welcome_index_path, class: 'dropdown-item' %>
+                <%= link_to t('texts.sign_out'), destroy_admin_session_path, method: :delete,
+                            class: 'dropdown-item' %>
+              </div>
             </li>
           <% end %>
         </ul>
