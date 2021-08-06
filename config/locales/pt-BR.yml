@@ -2,6 +2,8 @@ pt-BR:
   actions:
     save: Salvar
   links:
+    add: Adicionar %{item}
+    remove: Remover %{item}
     back: Voltar
   messages:
     success:
@@ -18,6 +20,8 @@ pt-BR:
         subjects: Este é o quadro de assuntos/áreas, onde você pode administrar a lista de assuntos/áreas que serão utilizadas nas questões.
   texts:
     adding: Adicionando
+    correct_f: Correta
+    correct_m: Correto
     editing: Editando
     confirmations:
       delete: Você tem certeza que deseja deletar "%{item}"

@@ -27,6 +27,17 @@
                             placeholder: @question_description,
                             rows: 5 %>
       </div>
+      <div id="answers" class="my-3">
+        <%= form.fields_for :answers do |answer| %>
+          <%= render partial: 'answer_fields', locals: { f: answer } %>
+
+        <% end %>
+
+        <span><%= t('links.add', item: t('activerecord.models.answer.one')) %></span>
+        <%= link_to_add_association form, :answers, class: 'btn btn-success btn-circle btn-sm ml-2' do %>
+          <i class="fa fa-plus"></i>
+        <% end %>
+      </div>
       <%= form.submit t('actions.save'), class: 'btn btn-primary col-sm-12 col-lg-3' %>
       <%= link_to t('links.back'), 
           admins_backoffice_questions_path,

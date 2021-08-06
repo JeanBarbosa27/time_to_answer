@@ -1,0 +1,11 @@
+<div class="nested-fields">
+  <div class="field mb-3">
+    <%= f.label :description %> <br />
+    <%= f.text_field :description, class: 'mr-2' %>
+
+    <%= f.check_box :correct %> <%= t 'texts.correct_f' %>?
+    <%= link_to_remove_association f do %>
+      <i class="fa fa-trash-alt text-danger"></i>
+    <% end %>
+  </div>
+</div>
