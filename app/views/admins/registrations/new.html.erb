@@ -21,7 +21,7 @@
             <div class="form-group">
               <% password_placeholder = t 'activerecord.attributes.admin.password' %>
               <% password_placeholder += " (#{t( 'texts.minimum_characters', 
-                                            minimum: @minimum_password_length).downcase})" if @minimum_password_length %>
+                                            minimum: @minimum_password_length)})".downcase if @minimum_password_length %>
               
               <%= f.password_field  :password, placeholder: password_placeholder,
                                     class: 'form-control form-control-user' %>
