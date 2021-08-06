@@ -12,7 +12,6 @@ namespace :dev do
       %x(`rails dev:add_default_user`)
       %x(`rails dev:add_default_subjects`)
       %x(`rails dev:add_fake_questions`)
-      %x(`rails dev:add_fake_answers`)
     else
       puts 'This command just works at development environment!'
     end
