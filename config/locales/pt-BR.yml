@@ -1,6 +1,7 @@
 pt-BR:
   actions:
     save: Salvar
+    search: Buscar
   links:
     add: Adicionar %{item}
     remove: Remover %{item}
@@ -27,6 +28,7 @@ pt-BR:
     editing: Editando
     email_address: Endereço de e-mail
     minimum_characters: Mínimo de %{minimum} caracteres
+    search: Digite o termo de busca...
     sign_in: Acessar
     sign_in_account: Acessar conta
     sign_out: Sair

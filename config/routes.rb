@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   # Namespaced routes
   namespace :site do
     get 'welcome/index'
+    get 'search', to: 'search#questions'
   end
 
   namespace :admins_backoffice do
