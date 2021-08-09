@@ -70,8 +70,14 @@
 
     <main role="main" class="container">
       <div class="jumbotron">
-        <h1>Seja bem vindo!</h1>
-        <p>Esse é o Time to Answer, aqui você pode errar à vontade, para acertar na hora da prova.</p>
+        <% if params[:term] %>
+          <h1>Resultado de busca</h1>
+          <p><%= "Exibindo resultados para: \"#{params[:term]}\"" %></p>
+        <% else %>
+          <h1>Seja bem vindo!</h1>
+          <p>Esse é o Time to Answer, aqui você pode errar à vontade, para acertar na hora da prova!</p>
+          <p>Abaixo você vê as últimas perguntas cadastradas.</p>
+        <% end %>
       </div>
 
       <%= yield %>
