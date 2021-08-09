@@ -6,13 +6,13 @@ class Question < ApplicationRecord
   # Kaminari
   paginates_per 5
 
-  def self.search(term, page)
-    Question.includes(:answers)
-            .where('lower(description) LIKE ?', "%#{term.downcase}%")
-            .page(page)
-  end
+  scope :search_by_description, ->(term, page) {
+    includes(:answers)
+      .where('lower(description) LIKE ?', "%#{term.downcase}%")
+      .page(page)
+  }
 
-  def self.last_questions(page)
-    Question.includes(:answers).order('created_at desc').page(page)
-  end
+  scope :order_by_last_questions, ->(page) {
+    includes(:answers).order('created_at desc').page(page)
+  }
 end
