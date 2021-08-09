@@ -1,4 +1,7 @@
-class Site::WelcomeController < SiteController
-  def index
+module Site
+  class WelcomeController < SiteController
+    def index
+      @questions = Question.includes(:answers).page(params[:page])
+    end
   end
 end
