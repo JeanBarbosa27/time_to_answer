@@ -1,16 +1,36 @@
+<div class="jumbotron">
+  <% if params[:term] %>
+    <h1>Resultado de busca</h1>
+    <p><%= "Exibindo resultados para: \"#{params[:term]}\"" %></p>
+  <% else %>
+    <h1>Seja bem vindo!</h1>
+    <p>Esse é o Time to Answer, aqui você pode errar à vontade, para acertar na hora da prova!</p>
+    <p>Abaixo você vê as últimas perguntas cadastradas.</p>
+  <% end %>
+</div>
+
 <% @questions.each do |question| %>
-  <div class="card mb-4">
+  <%= form_with url: site_answer_path, local: true, class: 'card mb-4' do |form| %>
     <div class="card-header">
       <%= question.description %>
     </div>
     <div class="card-body">
-      <ul>
+      <ul class="list-group">
         <% question.answers.each do |answer| %>
-          <li class="card-text"><%= answer.description %></li>
+        <li class="card-text list-group-item">
+          <div class="radio">
+            <label style="cursor: pointer;">
+              <%= radio_button_tag 'answer', answer.id %> <%= answer.description %>
+            </label>
+          </div>
+        </li>
         <% end %>
+        <li class="card-text list-group-item">
+          <%= form.submit t('actions.answer'), class: 'btn btn-success' %>
+        </li>
       </ul>
     </div>
-  </div>
+  <% end %>
 <% end %>
 
 <%= render partial: 'shared/components/paginator', locals: { model: @questions } %>
