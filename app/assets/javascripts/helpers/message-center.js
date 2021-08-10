@@ -1,3 +1,5 @@
+//= require jquery.bootstrap-growl.min.js
+
 const defaultMessage = 'Faltou informar o parâmetro noticeMessage'
 
 function showNotice(noticeMessage = defaultMessage, type) {
