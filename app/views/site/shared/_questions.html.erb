@@ -7,12 +7,12 @@
 <% if @questions.size > 0 %>
   <% @questions.each do |question| %>
     <%= form_with url: site_answer_path, class: 'card mb-4' do |form| %>
-      <h3 class="card-header">
-        <%= link_to question.subject.description,
+      <h5 class="card-header">
+        <%= link_to "#{question.subject.description} (#{question.subject.questions_count})",
                     site_search_subject_path(question.subject_id, question.subject.description),
                     class: "badge badge-info text-light mr-2" %>
         <%= question.description %>
-      </h3>
+      </h5>
       <div class="card-body">
         <ul class="list-group">
           <% question.answers.each do |answer| %>
