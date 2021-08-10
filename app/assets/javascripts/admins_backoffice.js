@@ -3,3 +3,4 @@
 // You can use CoffeeScript in this file: http://coffeescript.org/
 
 //= require admins_backoffice/vendors
+//= require helpers/message-center

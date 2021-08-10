@@ -1,0 +1,27 @@
+var correctAnswer = <%= @answer.correct %>
+var answerId = <%= @answer.id %>
+var questionId = <%= @answer.question_id %>
+
+var questionItem = `[data-question-item="question-id-${questionId}"]`
+var itemAnswerOption = `[data-answer-option="answer-id-${answerId}"]`
+var itemButtonAttr = `[data-question-button="question-id-${questionId}"]`
+
+var $questionItems = $(questionItem)
+var $answerOption = $(itemAnswerOption)
+var $questionButton = $(itemButtonAttr)
+
+var successMessage = 'Parabéns você acertou!'
+var errorMessage = 'Infelizmente você errou.'
+
+if (correctAnswer) {
+  $answerOption.addClass('text-light bg-success')
+  showNotice(successMessage, 'success') // it'd been required in site.js
+} else {
+  $answerOption.addClass('text-light bg-danger')
+  showNotice(errorMessage, 'danger') // it'd been required in site.js
+}
+
+$questionButton.remove()
+$questionItems.each(function(_, item) {
+  $(item).find('input').attr('disabled', 'disabled')
+})

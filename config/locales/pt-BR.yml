@@ -8,9 +8,14 @@ pt-BR:
     remove: Remover %{item}
     back: Voltar
   messages:
+    default:
+      missing_parameter: Você precisa informar o parâmetro %{item}
+    error:
+      you_missed: Infelizmente você errou.
     success:
       create: '"%{item}" cadastrado com sucesso!'
       delete: '"%{item}" removido com sucesso!'
+      got_right: Parabéns você acertou!
       update: '"%{item}" atualizado com sucesso!'
   panels:
     administrative_backoffice:

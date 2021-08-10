@@ -10,23 +10,24 @@
 </div>
 
 <% @questions.each do |question| %>
-  <%= form_with url: site_answer_path, local: true, class: 'card mb-4' do |form| %>
+  <%= form_with url: site_answer_path, class: 'card mb-4' do |form| %>
     <div class="card-header">
       <%= question.description %>
     </div>
     <div class="card-body">
       <ul class="list-group">
         <% question.answers.each do |answer| %>
-        <li class="card-text list-group-item">
+        <li class="card-text list-group-item" data-answer-option="answer-id-<%= answer.id %>"   
+            data-question-item="question-id-<%= question.id %>">
           <div class="radio">
             <label style="cursor: pointer;">
-              <%= radio_button_tag 'answer', answer.id %> <%= answer.description %>
+              <%= radio_button_tag 'answer_id', answer.id %> <%= answer.description %>
             </label>
           </div>
         </li>
         <% end %>
-        <li class="card-text list-group-item">
-          <%= form.submit t('actions.answer'), class: 'btn btn-success' %>
+        <li class="card-text list-group-item" data-question-button="question-id-<%= question.id %>">
+          <%= form.submit t('actions.answer'), class: 'btn btn-primary' %>
         </li>
       </ul>
     </div>

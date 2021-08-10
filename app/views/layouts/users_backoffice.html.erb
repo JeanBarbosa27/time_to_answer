@@ -301,5 +301,10 @@
     <%# Users Backoffice JS %>
     <%= javascript_include_tag 'users_backoffice' %>
     
+    <% if notice %>
+      <%= javascript_tag do %>
+        showNotice('<%= notice %>', 'success')
+      <% end %>
+    <% end %>
   </body>
 </html>
