@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'site/welcome#index'
 
   # Devise routes
-  devise_for :admins
+  devise_for :admins, skip: [:registrations]
   devise_for :users
 
   # Namespaced routes
