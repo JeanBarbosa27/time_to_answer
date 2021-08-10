@@ -3,6 +3,11 @@ pt-BR:
     answer: Responder
     save: Salvar
     search: Buscar
+    sign_in: Acessar
+    sign_in_account: Acessar conta
+    sign_out: Sair
+    sign_up: Cadastrar
+    sign_up_account: Cadastrar conta
   links:
     add: Adicionar %{item}
     remove: Remover %{item}
@@ -35,11 +40,6 @@ pt-BR:
     email_address: Endereço de e-mail
     minimum_characters: Mínimo de %{minimum} caracteres
     search: Digite o termo de busca...
-    sign_in: Acessar
-    sign_in_account: Acessar conta
-    sign_out: Sair
-    sign_up: Cadastrar
-    sign_up_account: Cadastrar conta
 
   verbs:
     action: Ação

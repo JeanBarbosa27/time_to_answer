@@ -45,6 +45,8 @@ pt-BR:
       user:
         id: Código identificador
         email: E-mail
+        first_name: Nome
+        last_name: Sobrenome
         password: Senha
         password_confirmation: Confirmação de senha
         created_at: Criado em

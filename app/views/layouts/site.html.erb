@@ -30,16 +30,16 @@
                 <% end %>
                 <%= link_to destroy_user_session_path, method: :delete,
                             class: 'dropdown-item' do %>
-                  <i class="fa fa-sign-out"></i> <%= t 'texts.sign_out' %>
+                  <i class="fa fa-sign-out"></i> <%= t 'actions.sign_out' %>
                 <% end %>
               </div>
             </li>
           <% else %>
             <li class="nav-item">
-              <%= link_to t('texts.sign_in_account'), new_user_session_path, class: 'nav-link' %>
+              <%= link_to t('actions.sign_in_account'), new_user_session_path, class: 'nav-link' %>
             </li>
             <li class="nav-item">
-              <%= link_to t('texts.sign_up_account'), new_user_registration_path, class: 'nav-link' %>
+              <%= link_to t('actions.sign_up_account'), new_user_registration_path, class: 'nav-link' %>
             </li>
           <% end %>
           <% if admin_signed_in? %>
@@ -53,7 +53,7 @@
                 <% end %>
                 <%= link_to destroy_admin_session_path, method: :delete,
                             class: 'dropdown-item' do %>
-                  <i class="fa fa-sign-out"></i> <%= t 'texts.sign_out' %>
+                  <i class="fa fa-sign-out"></i> <%= t 'actions.sign_out' %>
                 <% end %>                            
               </div>
             </li>
