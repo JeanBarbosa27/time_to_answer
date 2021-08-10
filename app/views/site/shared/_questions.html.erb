@@ -1,37 +1,39 @@
 <div class="jumbotron">
-  <% if params[:term] %>
-    <h1>Resultado de busca</h1>
-    <p><%= "Exibindo resultados para: \"#{params[:term]}\"" %></p>
-  <% else %>
-    <h1>Seja bem vindo!</h1>
-    <p>Esse é o Time to Answer, aqui você pode errar à vontade, para acertar na hora da prova!</p>
-    <p>Abaixo você vê as últimas perguntas cadastradas.</p>
+  <h1><%= jumbotron_text[:title] %></h1>
+  <% jumbotron_text[:texts].each do |text| %>
+    <p><%= text %></p>
   <% end %>
 </div>
-
-<% @questions.each do |question| %>
-  <%= form_with url: site_answer_path, class: 'card mb-4' do |form| %>
-    <div class="card-header">
-      <%= question.description %>
-    </div>
-    <div class="card-body">
-      <ul class="list-group">
-        <% question.answers.each do |answer| %>
-        <li class="card-text list-group-item" data-answer-option="answer-id-<%= answer.id %>"   
-            data-question-item="question-id-<%= question.id %>">
-          <div class="radio">
-            <label style="cursor: pointer;">
-              <%= radio_button_tag 'answer_id', answer.id %> <%= answer.description %>
-            </label>
-          </div>
-        </li>
-        <% end %>
-        <li class="card-text list-group-item" data-question-button="question-id-<%= question.id %>">
-          <%= form.submit t('actions.answer'), class: 'btn btn-primary' %>
-        </li>
-      </ul>
-    </div>
+<% if @questions.size > 0 %>
+  <% @questions.each do |question| %>
+    <%= form_with url: site_answer_path, class: 'card mb-4' do |form| %>
+      <h3 class="card-header">
+        <%= link_to question.subject.description,
+                    site_search_subject_path(question.subject_id, question.subject.description),
+                    class: "badge badge-info text-light mr-2" %>
+        <%= question.description %>
+      </h3>
+      <div class="card-body">
+        <ul class="list-group">
+          <% question.answers.each do |answer| %>
+          <li class="card-text list-group-item" data-answer-option="answer-id-<%= answer.id %>"   
+              data-question-item="question-id-<%= question.id %>">
+            <div class="radio">
+              <label style="cursor: pointer;">
+                <%= radio_button_tag 'answer_id', answer.id %> <%= answer.description %>
+              </label>
+            </div>
+          </li>
+          <% end %>
+          <li class="card-text list-group-item" data-question-button="question-id-<%= question.id %>">
+            <%= form.submit t('actions.answer'), class: 'btn btn-primary' %>
+          </li>
+        </ul>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
 
-<%= render partial: 'shared/components/paginator', locals: { model: @questions } %>
+  <%= render partial: 'shared/components/paginator', locals: { model: @questions } %>
+<% else %>
+  <h3>Não há questões cadastradas para sua busca!</h3>
+<% end %>
