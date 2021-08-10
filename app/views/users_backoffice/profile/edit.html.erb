@@ -13,7 +13,7 @@
       <div class="x_content">
         <% if @user.errors.any? %>
           <% @user.errors.full_messages.each do |message| %>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <div class="col-5 mx-auto alert alert-danger alert-dismissible fade show" role="alert">
               <span><%= message %></span>
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -26,45 +26,55 @@
                       class: 'form-horizontal form-label-left' do |form| %>
 
           <div class="item form-group">
-            <%= form.label :first_name, class: 'col-form-label col-md-3 col-sm-3 label-align' do %>
-              <%= t 'activerecord.attributes.user.first_name' %> <span class="required">*</span>
-            <% end %>
+            <div class="col-md-3 col-sm-3">
+              <%= form.label :first_name, class: 'col-form-label label-align col-12' do %>
+                <%= t 'activerecord.attributes.user.first_name' %> <span class="required">*</span>
+              <% end %>
+            </div>
             <div class="col-md-6 col-sm-6 ">
               <%= form.text_field :first_name, class: 'form-control', required: true %>
             </div>
           </div>
 
           <div class="item form-group">
-            <%= form.label :last_name, class: 'col-form-label col-md-3 col-sm-3 label-align' do %>
-              <%= t 'activerecord.attributes.user.last_name' %> <span class="required">*</span>
-            <% end %>
+            <div class="col-md-3 col-sm-3">
+              <%= form.label :last_name, class: 'col-form-label label-align col-12' do %>
+                <%= t 'activerecord.attributes.user.last_name' %> <span class="required">*</span>
+              <% end %>
+            </div>
             <div class="col-md-6 col-sm-6 ">
               <%= form.text_field :last_name, class: 'form-control', required: true %>
             </div>
           </div>
 
           <div class="item form-group">
-            <%= form.label :email, class: 'col-form-label col-md-3 col-sm-3 label-align' do %>
-              <%= t 'activerecord.attributes.user.email' %>
-            <% end %>
+            <div class="col-md-3 col-sm-3">
+              <%= form.label :email, class: 'col-form-label label-align col-12' do %>
+                <%= t 'activerecord.attributes.user.email' %>
+              <% end %>
+            </div>
             <div class="col-md-6 col-sm-6 ">
               <%= form.email_field :email, class: 'form-control', readonly: true %>
             </div>
           </div>
 
           <div class="item form-group">
-            <%= form.label :password, class: 'col-form-label col-md-3 col-sm-3 label-align' do %>
-              <%= t 'activerecord.attributes.user.password' %>
-            <% end %>
+            <div class="col-md-3 col-sm-3">
+              <%= form.label :password, class: 'col-form-label label-align col-12' do %>
+                <%= t 'activerecord.attributes.user.password' %>
+              <% end %>
+            </div>
             <div class="col-md-6 col-sm-6 ">
               <%= form.password_field :password, class: 'form-control' %>
             </div>
           </div>
 
           <div class="item form-group">
-            <%= form.label :password_confirmation, class: 'col-form-label col-md-3 col-sm-3 label-align' do %>
-              <%= t 'activerecord.attributes.user.password_confirmation' %>
-            <% end %>
+            <div class="col-md-3 col-sm-3">
+              <%= form.label :password_confirmation, class: 'col-form-label label-align col-12' do %>
+                <%= t 'activerecord.attributes.user.password_confirmation' %>
+              <% end %>
+            </div>
             <div class="col-md-6 col-sm-6 ">
               <%= form.password_field :password_confirmation, class: 'form-control' %>
             </div>

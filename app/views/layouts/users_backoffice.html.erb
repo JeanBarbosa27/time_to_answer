@@ -35,8 +35,10 @@
                 <%= image_tag 'user-placeholder.png', class: 'img-circle profile_img' %>
               </div>
               <div class="profile_info">
-                <span>Welcome,</span>
-                <h2><%= current_user.email %></h2>
+                <span><%= t 'texts.welcome' %>,</span>
+                <h2>
+                  <%= current_user.first_name ? current_user.full_name : current_user.email %>
+                </h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
