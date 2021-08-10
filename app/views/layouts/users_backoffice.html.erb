@@ -54,6 +54,11 @@
                   </li>
                   <li>
                   <%= link_to users_backoffice_welcome_index_path do %>
+                    <i class="fa fa-dashboard"></i> Início</a>
+                  <% end %>
+                  </li>
+                  <li>
+                  <%= link_to users_backoffice_profile_path do %>
                     <i class="fa fa-user"></i> Dados do perfil</a>
                   <% end %>
                   </li>
@@ -186,10 +191,7 @@
         <div class="right_col" role="main">
           <div class="">
             <div class="page-title">
-              <div class="title_left">
-                <h1>LAYOUTS USERS BACKOFFICE</h1>
-                <%= yield %>
-              </div>
+              <%= yield %>
             </div>
           </div>
         </div>
