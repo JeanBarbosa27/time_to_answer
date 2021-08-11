@@ -48,7 +48,7 @@
                 <%= current_admin.email %>
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <%= link_to admins_backoffice_welcome_index_path, class: 'dropdown-item' do %>
+                <%= link_to admin_path, class: 'dropdown-item' do %>
                   <i class="fa fa-users"></i> Admin
                 <% end %>
                 <%= link_to destroy_admin_session_path, method: :delete,

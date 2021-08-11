@@ -33,7 +33,7 @@
       <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion toggled" id="accordionSidebar">
 
         <!-- Sidebar - Brand -->
-        <%= link_to admins_backoffice_welcome_index_path,
+        <%= link_to admin_path,
                     class: 'sidebar-brand d-flex align-items-center justify-content-center' do %>
           <div class="sidebar-brand-icon">
             <i class="fas fa-users-cog" title="<%= t 'panels.administrative_backoffice.title' %>"></i>
@@ -46,9 +46,9 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-          <%= link_to admins_backoffice_welcome_index_path, class:"nav-link" do %>
+          <%= link_to admin_path, class:"nav-link" do %>
             <i  class="fas fa-fw fa-tachometer-alt
-                <%= 'text-light' if active_link?(admins_backoffice_welcome_index_path) %>"
+                <%= 'text-light' if active_link?(admin_path) %>"
             ></i>
             <span>Dashboard</span>
           <% end %>

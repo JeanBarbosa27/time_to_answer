@@ -28,6 +28,7 @@ Rails.application.routes.draw do
     patch 'profile', to: 'profile#update'
   end
 
+  get 'admin', to: 'admins_backoffice/welcome#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
