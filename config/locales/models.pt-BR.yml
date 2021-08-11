@@ -16,6 +16,7 @@ pt-BR:
       user:
         one: Usuário
         other: Usuários
+      user_profile: Perfil do usuário
     attributes:
       admin:
         id: Código identificador
@@ -24,6 +25,7 @@ pt-BR:
         password_confirmation: Confirmação de senha
         created_at: Criado em
         updated_at: Atualizado em
+
       answer:
         id: Código identificador
         description: Resposta
@@ -37,11 +39,13 @@ pt-BR:
         subject: Assunto/Área
         created_at: Criado em
         updated_at: Atualizado em
+
       subject:
         id: Código identificador
         description: Assunto/Área
         created_at: Criado em
         updated_at: Atualizado em
+
       user:
         id: Código identificador
         email: E-mail
@@ -49,5 +53,13 @@ pt-BR:
         last_name: Sobrenome
         password: Senha
         password_confirmation: Confirmação de senha
+        created_at: Criado em
+        updated_at: Atualizado em
+      
+      user_profile:
+        id: Código identificador
+        address: Endereço
+        gender: Gênero
+        birthdate: Data de nascimento
         created_at: Criado em
         updated_at: Atualizado em

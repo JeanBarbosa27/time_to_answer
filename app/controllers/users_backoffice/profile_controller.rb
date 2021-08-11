@@ -4,6 +4,7 @@ module UsersBackoffice
     before_action :extract_passwords, only: %i[update]
 
     def edit
+      @user.build_user_profile if @user.user_profile.blank?
     end
 
     def update
@@ -34,7 +35,13 @@ module UsersBackoffice
         :first_name,
         :last_name,
         :password,
-        :password_confirmation
+        :password_confirmation,
+        user_profile_attributes: %i[
+          id
+          address
+          gender
+          birthdate
+        ]
       )
     end
   end

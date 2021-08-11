@@ -58,11 +58,38 @@
             </div>
           </div>
 
+          <%= form.fields_for :user_profile do |user_profile_form| %>
+            <div class="item form-group">
+              <div class="col-md-3 col-sm-3">
+                <%= user_profile_form.label :address, class: 'col-form-label label-align col-12' %>
+              </div>
+              <div class="col-md-6 col-sm-6 ">
+                <%= user_profile_form.text_field :address, class: 'form-control' %>
+              </div>
+            </div>
+
+            <div class="item form-group">
+              <div class="col-md-3 col-sm-3">
+                <%= user_profile_form.label :gender, class: 'col-form-label label-align col-12' %>
+              </div>
+              <div class="col-md-6 col-sm-6 ">
+                <%= user_profile_form.text_field :gender, class: 'form-control' %>
+              </div>
+            </div>
+
+            <div class="item form-group">
+              <div class="col-md-3 col-sm-3">
+                <%= user_profile_form.label :birthdate, class: 'col-form-label label-align col-12' %>
+              </div>
+              <div class="col-md-6 col-sm-6 ">
+                <%= user_profile_form.text_field :birthdate, class: 'form-control' %>
+              </div>
+            </div>
+          <% end %>
+
           <div class="item form-group">
             <div class="col-md-3 col-sm-3">
-              <%= form.label :password, class: 'col-form-label label-align col-12' do %>
-                <%= t 'activerecord.attributes.user.password' %>
-              <% end %>
+              <%= form.label :password, class: 'col-form-label label-align col-12' %>
             </div>
             <div class="col-md-6 col-sm-6 ">
               <%= form.password_field :password, class: 'form-control' %>
@@ -71,9 +98,7 @@
 
           <div class="item form-group">
             <div class="col-md-3 col-sm-3">
-              <%= form.label :password_confirmation, class: 'col-form-label label-align col-12' do %>
-                <%= t 'activerecord.attributes.user.password_confirmation' %>
-              <% end %>
+              <%= form.label :password_confirmation, class: 'col-form-label label-align col-12' %>
             </div>
             <div class="col-md-6 col-sm-6 ">
               <%= form.password_field :password_confirmation, class: 'form-control' %>
