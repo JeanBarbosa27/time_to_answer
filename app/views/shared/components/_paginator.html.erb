@@ -1,3 +1,9 @@
-<div class="d-flex justify-content-center mt-3">
-  <%= paginate model %>
-</div>
+<% if user_signed_in? || admin_signed_in? %>
+  <div class="d-flex justify-content-center mt-3">
+    <%= paginate model %>
+  </div>
+<% else %>
+  <div class="alert alert-warning" role="alert">
+    <%= t 'messages.ask_for_login_to_see_more' %>
+  </div>
+<% end %>

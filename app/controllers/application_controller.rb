@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  before_action :restrict_pagination
+
   layout :layout_by_resource
 
   private
@@ -7,4 +9,9 @@ class ApplicationController < ActionController::Base
     devise_layout = "#{resource_class.to_s.downcase}_devise"
     devise_controller? ? devise_layout : 'application'
   end
+
+  def restrict_pagination
+    params.extract!(:page) unless user_signed_in? || admin_signed_in?
+  end
+  
 end

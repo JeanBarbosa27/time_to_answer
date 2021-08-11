@@ -13,6 +13,7 @@ pt-BR:
     remove: Remover %{item}
     back: Voltar
   messages:
+    ask_for_login_to_see_more: Realize o login e visualize mais
     default:
       missing_parameter: Você precisa informar o parâmetro %{item}
     error:
