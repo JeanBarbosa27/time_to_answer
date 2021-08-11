@@ -3,4 +3,5 @@
 //= require fastclick
 //= require nprogress
 //= require jquery.mCustomScrollbar.concat.min.js
+//= require jquery-ui.min.js
 //= require gentelella.min.js

@@ -3,5 +3,7 @@
  *= require font-awesome/global.min.css
  *= require nprogress
  *= require jquery.mCustomScrollbar.min.css
+ *= require jquery-ui.theme.min.css
+ *= require jquery-ui.min.css
  *= require gentelella.min.css
 */

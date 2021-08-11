@@ -91,7 +91,8 @@
                 <%= user_profile_form.label :birthdate, class: 'col-form-label label-align col-12' %>
               </div>
               <div class="col-md-6 col-sm-6 ">
-                <%= user_profile_form.text_field :birthdate, class: 'form-control' %>
+                <input type="text" value='<%= locale_birthdate %>' class="form-control" data-datepicker="apply">
+                <%= user_profile_form.hidden_field :birthdate %>
               </div>
             </div>
           <% end %>
