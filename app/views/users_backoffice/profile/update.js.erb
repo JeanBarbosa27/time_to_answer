@@ -1,0 +1,8 @@
+var avatarUrl = "<%= url_for(@user.user_profile.avatar) %>"
+var successMessage = "<%= t('messages.success.update', item: t('activerecord.attributes.user_profile.avatar')) %>"
+
+$('[data-avatar="image"]').each((_, element) => $(element).attr('src', avatarUrl))
+
+showNotice(successMessage, 'success')
+
+setTimeout(() => $('#avatarModal').modal('hide'), 1000)

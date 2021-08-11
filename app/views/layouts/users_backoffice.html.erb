@@ -33,7 +33,7 @@
             <div class="profile clearfix">
               <div class="profile_pic">
                 <%= link_to '#', data: { toggle: 'modal', target: '#avatarModal' } do %>
-                  <%= image_tag avatar_url, class: 'img-circle profile_img' %>
+                  <%= image_tag avatar_url, class: 'img-circle profile_img', data: { avatar: 'image' } %>
                 <% end %>
               </div>
               <div class="profile_info">
@@ -102,7 +102,7 @@
                 <ul class=" navbar-right">
                   <li class="nav-item dropdown open" style="padding-left: 15px;">
                     <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                      <%= image_tag avatar_url %>
+                      <%= image_tag avatar_url, data: { avatar: 'image' } %>
                       <%= current_user.email %>
                     </a>
                     <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
@@ -216,8 +216,8 @@
     <div class="modal fade" id="avatarModal" tabindex="-1" aria-labelledby="avatarModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <%= form_with url: users_backoffice_profile_path, model: current_user, local: true,
-                    class: 'form-horizontal form-label-left' do |form| %>
+          <%= form_with url: users_backoffice_profile_path, model: current_user,
+                        class: 'form-horizontal form-label-left' do |form| %>
             <div class="modal-header">
               <h5 class="modal-title" id="avatarModalLabel">Avatar</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -225,7 +225,7 @@
               </button>
             </div>
             <div class="modal-body">
-              <%= image_tag avatar_url, class: 'img-circle profile_img' %>
+              <%= image_tag avatar_url, class: 'img-circle profile_img', data: { avatar: 'image' } %>
               <%= form.fields_for :user_profile do |user_profile_form| %>
                 <div class="item form-group">
                   <%= user_profile_form.file_field :avatar %>

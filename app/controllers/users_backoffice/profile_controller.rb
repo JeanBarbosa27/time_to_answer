@@ -10,10 +10,7 @@ module UsersBackoffice
     def update
       if @user.update(user_params)
         bypass_sign_in @user
-        if params[:user][:user_profile_attributes][:avatar]
-          redirect_to users_backoffice_welcome_index_url,
-                      notice: I18n.t('messages.success.update', item: t('activerecord.attributes.user_profile.avatar'))
-        else
+        unless params[:user][:user_profile_attributes][:avatar]
           redirect_to users_backoffice_profile_url, notice: I18n.t('messages.success.update', item: @user.email)
         end
       else

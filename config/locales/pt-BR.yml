@@ -21,7 +21,7 @@ pt-BR:
       create: '"%{item}" cadastrado com sucesso!'
       delete: '"%{item}" removido com sucesso!'
       got_right: Parabéns você acertou!
-      update: '"%{item}" atualizado com sucesso!'
+      update: '"%{item}" atualizado(a) com sucesso!'
   panels:
     administrative_backoffice:
       title: Backoffice Administrativo
