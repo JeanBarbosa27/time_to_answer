@@ -59,6 +59,7 @@ pt-BR:
       user_profile:
         id: Código identificador
         address: Endereço
+        avatar: Foto do perfil
         gender: Gênero
         birthdate: Data de nascimento
         created_at: Criado em
