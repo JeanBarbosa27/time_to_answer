@@ -73,7 +73,16 @@
                 <%= user_profile_form.label :gender, class: 'col-form-label label-align col-12' %>
               </div>
               <div class="col-md-6 col-sm-6 ">
-                <%= user_profile_form.text_field :gender, class: 'form-control' %>
+                <div id="gender" class="btn-group" data-toggle="buttons">
+                  <label class="btn <%= select_gender(@user, 'F') %>" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                    <%= user_profile_form.radio_button  :gender, 'F', class: 'join-btn',
+                                                        data: {'parsley-multiple': 'gender'} %> Feminino
+                  </label>
+                  <label class="btn <%= select_gender(@user, 'M') %>" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                    <%= user_profile_form.radio_button  :gender, 'M', class: 'join-btn',
+                                                        data: {'parsley-multiple': 'gender'} %> Masculino
+                  </label>
+                </div>
               </div>
             </div>
 
