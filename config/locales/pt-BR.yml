@@ -1,6 +1,7 @@
 pt-BR:
   actions:
     answer: Responder
+    change: Mudar %{item}
     save: Salvar
     search: Buscar
     sign_in: Acessar
@@ -39,6 +40,8 @@ pt-BR:
         subjects: Este é o quadro de assuntos/áreas, onde você pode administrar a lista de assuntos/áreas que serão utilizadas nas questões.
   texts:
     adding: Adicionando
+    change_your_password: Mude sua senha
+    confirm_new_password: Confirme a nova senha
     confirmations:
       delete: Você tem certeza que deseja deletar "%{item}"
     correct_f: Correta
@@ -46,6 +49,7 @@ pt-BR:
     editing: Editando
     email_address: Endereço de e-mail
     minimum_characters: Mínimo de %{minimum} caracteres
+    new_password: Nova senha
     send_reset_password_instructions: Enviar instruções de recuperação de senha
     search: Digite o termo de busca...
     welcome: Seja bem-vindo(a)
