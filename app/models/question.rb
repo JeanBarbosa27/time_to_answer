@@ -3,6 +3,8 @@ class Question < ApplicationRecord
   has_many :answers
   accepts_nested_attributes_for :answers, reject_if: :all_blank, allow_destroy: true
 
+  after_create :increment_admin_statistic
+
   # Kaminari
   paginates_per 5
 
@@ -12,7 +14,7 @@ class Question < ApplicationRecord
       .page(page)
   }
 
-  scope :search_by_subject, ->(subject_id, page) { 
+  scope :search_by_subject, ->(subject_id, page) {
     includes(:answers, :subject)
       .where(subject_id: subject_id)
       .page(page)
@@ -21,4 +23,10 @@ class Question < ApplicationRecord
   scope :order_by_last_questions, ->(page) {
     includes(:answers, :subject).order('created_at desc').page(page)
   }
+
+  private
+
+  def increment_admin_statistic
+    AdminStatistic.increment_by_event(AdminStatistic::EVENTS[:total_questions])
+  end
 end

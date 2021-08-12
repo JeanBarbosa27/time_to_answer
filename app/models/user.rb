@@ -9,7 +9,16 @@ class User < ApplicationRecord
   has_one :user_profile
   accepts_nested_attributes_for :user_profile, reject_if: :all_blank
 
+  after_create :increment_admin_statistic
+
   def full_name
     [first_name, last_name].join(' ')
   end
+
+  private
+
+  def increment_admin_statistic
+    AdminStatistic.increment_by_event(AdminStatistic::EVENTS[:total_users])
+  end
+  
 end

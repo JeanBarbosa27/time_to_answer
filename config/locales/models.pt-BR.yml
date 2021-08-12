@@ -4,6 +4,7 @@ pt-BR:
       admin:
         one: Administrador
         other: Administradores
+      admin_statistic: Estatísticas do administrador
       answer:
         one: Resposta
         other: Responstas
@@ -30,7 +31,13 @@ pt-BR:
         password_confirmation: Confirmação de senha
         created_at: Criado em
         updated_at: Atualizado em
-
+      
+      admin_statistic:
+        id: Código identificador
+        event: Evento
+        value: Valor
+        created_at: Criado em
+        updated_at: Atualizado em
       answer:
         id: Código identificador
         description: Resposta
