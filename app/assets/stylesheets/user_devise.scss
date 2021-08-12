@@ -8,9 +8,13 @@
 .login_content {
   form, #content form {
     input[type="submit"], .submit {
-      width: 70%;
       float: none;
       margin-left: 0;
+      
     }
   }
+}
+
+.w-70 {
+  width: 70%;
 }
