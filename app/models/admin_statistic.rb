@@ -1,9 +1,17 @@
 class AdminStatistic < ApplicationRecord
   EVENTS = {
-    total_users: 'TOTAL_USERS',
-    total_questions: 'TOTAL_QUESTIONS'
+    total_users: 'TOTAL_USERS'.freeze,
+    total_questions: 'TOTAL_QUESTIONS'.freeze
   }
   
+  scope :total_users, -> { 
+    find_by_event(EVENTS[:total_users]).value
+  }
+  
+  scope :total_questions, -> { 
+    find_by_event(EVENTS[:total_questions]).value
+  }
+
   def self.increment_by_event(event)
     admin_statistic = AdminStatistic.find_or_create_by(event: event)
     admin_statistic.value += 1
