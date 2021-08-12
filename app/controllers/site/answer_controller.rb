@@ -2,17 +2,7 @@ module Site
   class AnswerController < SiteController
     def question
       @answer = Answer.find(params[:answer_id])
-      set_user_statistics(@answer)
-    end
-
-    private
-
-    def set_user_statistics(answer)
-      if user_signed_in?
-        user_statistic = UserStatistic.find_or_create_by(user: current_user)
-        answer.correct ? user_statistic.right_questions += 1 : user_statistic.wrong_questions += 1
-        user_statistic.save
-      end
+      UserStatistic.set_statistics(current_user, @answer)
     end
   end
 end

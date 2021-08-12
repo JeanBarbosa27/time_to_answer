@@ -4,19 +4,19 @@
 <div class="tile_count">
   <div class="col-md-2 col-sm-4  tile_stats_count">
     <span class="count_top">
-      <i class="fa fa-user"></i> <%= t 'activerecord.attributes.user_statistic.total_questions' %>
+      <i class="fa fa-comments-o"></i> <%= t 'activerecord.attributes.user_statistic.total_questions' %>
     </span>
     <div class="count"><%= @user_statistic.total_questions %></div>
   </div>
   <div class="col-md-2 col-sm-4  tile_stats_count">
     <span class="count_top">
-      <i class="fa fa-clock-o"></i> <%= t 'activerecord.attributes.user_statistic.right_questions' %>
+      <i class="fa fa-check"></i> <%= t 'activerecord.attributes.user_statistic.right_questions' %>
     </span>
     <div class="count green"><%= @user_statistic.right_questions %></div>
   </div>
   <div class="col-md-2 col-sm-4  tile_stats_count">
     <span class="count_top">
-      <i class="fa fa-user"></i> <%= t 'activerecord.attributes.user_statistic.wrong_questions' %>
+      <i class="fa fa-close"></i> <%= t 'activerecord.attributes.user_statistic.wrong_questions' %>
     </span>
     <div class="count red"><%= @user_statistic.wrong_questions %></div>
   </div>
