@@ -16,7 +16,12 @@ pt-BR:
       user:
         one: Usuário
         other: Usuários
-      user_profile: Perfil do usuário
+      user_statistics:
+        one: Estatísticas do usuário
+        other: Estatísticas dos usuários
+      user_profile:
+        one: Perfil do usuário
+        other: Perfis dos usuários
     attributes:
       admin:
         id: Código identificador
@@ -62,5 +67,15 @@ pt-BR:
         avatar: Foto do perfil
         gender: Gênero
         birthdate: Data de nascimento
+        user: Usuário
+        created_at: Criado em
+        updated_at: Atualizado em
+      
+      user_statistic:
+        id: Código identificador
+        right_questions: Respostas corretas
+        wrong_questions: Respostas erradas
+        total_questions: Total de respostas
+        user: Usuário
         created_at: Criado em
         updated_at: Atualizado em

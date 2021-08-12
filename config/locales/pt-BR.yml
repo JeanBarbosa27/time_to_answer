@@ -18,6 +18,7 @@ pt-BR:
       missing_parameter: Você precisa informar o parâmetro %{item}
     error:
       you_missed: Infelizmente você errou.
+    see_your_statistics_below: Veja abaixo as suas estatísticas
     success:
       create: '"%{item}" cadastrado com sucesso!'
       delete: '"%{item}" removido com sucesso!'
