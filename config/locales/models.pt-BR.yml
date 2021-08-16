@@ -75,6 +75,7 @@ pt-BR:
         gender: Gênero
         birthdate: Data de nascimento
         user: Usuário
+        zip_code: CEP
         created_at: Criado em
         updated_at: Atualizado em
       

@@ -26,6 +26,7 @@ Rails.application.routes.draw do
     get 'welcome/index'
     get 'profile', to: 'profile#edit'
     patch 'profile', to: 'profile#update'
+    get 'zip_code', to: 'zip_code#show'
   end
 
   get 'admin', to: 'admins_backoffice/welcome#index'

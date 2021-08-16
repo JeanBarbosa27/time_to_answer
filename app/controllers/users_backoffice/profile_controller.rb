@@ -38,7 +38,7 @@ module UsersBackoffice
         :last_name,
         :password,
         :password_confirmation,
-        user_profile_attributes: %i[id address gender birthdate avatar]
+        user_profile_attributes: %i[id zip_code address gender birthdate avatar]
       )
     end
   end

@@ -61,6 +61,27 @@
           <%= form.fields_for :user_profile do |user_profile_form| %>
             <div class="item form-group">
               <div class="col-md-3 col-sm-3">
+                <%= user_profile_form.label :zip_code, class: 'col-form-label label-align col-12' %>
+              </div>
+              <div class="input-group col-md-6 col-sm-6">
+                <%= user_profile_form.text_field :zip_code, class: 'form-control' %>
+                <span class="input-group-btn">
+                  <%= link_to t('actions.search'), users_backoffice_zip_code_path,
+                              remote: true, class: 'btn btn-primary', data: { 'get': 'address' } %>
+                </span>
+              </div>
+            </div>
+
+            <script>
+              var zipCode = document.querySelector('#user_user_profile_attributes_zip_code')
+              var getAddres = document.querySelector('[data-get="address"]')
+              zipCode.addEventListener('change', () => {
+                getAddres.href = '<%= users_backoffice_zip_code_path %>/?zip_code=' + zipCode.value
+              })
+            </script>
+
+            <div class="item form-group">
+              <div class="col-md-3 col-sm-3">
                 <%= user_profile_form.label :address, class: 'col-form-label label-align col-12' %>
               </div>
               <div class="col-md-6 col-sm-6 ">
