@@ -6,6 +6,7 @@ module AdminsBackoffice
       respond_to do |format|
         format.html { @subjects = Subject.order(:description).page params[:page] }
         format.pdf { @subjects = Subject.order(:description) }
+        format.json { @subjects = Subject.order(:description) }
       end
     end
 
