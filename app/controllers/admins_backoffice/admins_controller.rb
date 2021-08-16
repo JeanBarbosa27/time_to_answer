@@ -4,7 +4,10 @@ module AdminsBackoffice
     before_action :extract_passwords, only: %i[update]
 
     def index
-      @admins = Admin.order(:email).page params[:page]
+      respond_to do |format|
+        format.html { @admins = Admin.order(:email).page params[:page] }
+        format.pdf { @admins = Admin.order(:email) }
+      end
     end
 
     def new
